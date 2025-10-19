@@ -12,13 +12,13 @@ redirect_from:
 Astrophysicist | Galaxy Evolution & JWST Enthusiast
 </p>
 
-<!-- Image floated to the right with proper margin -->
-<img src="/images/jwst.png" alt="JWST Image" width="300" style="float: right; margin-left: 20px; margin-top: 10px;">
-
-<!-- Image credit below the image -->
-<div style="clear: right; font-size: 0.8em; color: #555; margin-top: 5px;">
-Image credit: <a href="https://webbtelescope.org/contents/media/images/01GHBYCCMDW24CT0BGH7WXNMS0.html" target="_blank">NASA / JWST</a>
+<div style="float: right; margin-left: 20px; margin-top: 10px; text-align: center; width: 300px;">
+  <img src="/images/jwst.png" alt="JWST Image" style="width: 100%;">
+  <div style="font-size: 0.8em; color: #555; margin-top: 5px;">
+    Image credit: <a href="https://webbtelescope.org/contents/media/images/01GHBYCCMDW24CT0BGH7WXNMS0.html" target="_blank">NASA / JWST</a>
+  </div>
 </div>
+
 
 <!-- About section -->
 # 💡 About 
