@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-UK"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Benjamin P. Collins"
+title                    : "Home"
 title_separator          : "-"
 name                     : &name "Benjamin Philip Collins"
 description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
@@ -23,19 +23,19 @@ repository               : "benjaminpcollins/benjaminpcollins.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "avatar.png"
+  avatar           : "profile_pic.jpg"
   name             : "Benjamin Philip Collins"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "MSc in Astrophysics and Cosmology"
   location         : "Bologna, Italy"
-  employer         : "Alma Mater Studiorum - Università di Bologna"
+  employer         : "University of Bologna"
   uri              : # URL
   email            : "benjamin.p.collins@icloud.com" 
 
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?hl=en&user=2VQ8ZXQAAAAJ"
   inspire-hep      : # URL
   impactstory      : # URL
   orcid            : "https://orcid.org/0009-0005-9328-6283"
