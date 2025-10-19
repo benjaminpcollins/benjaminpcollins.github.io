@@ -7,15 +7,22 @@ redirect_from:
   - /about.html
 ---
 
-*Astrophysicist | Galaxy Evolution & JWST Enthusiast*
+<!-- Greeting subtitle -->
+<p style="font-size: 1.2em; color: #555; margin-bottom: 20px;">
+Astrophysicist | Galaxy Evolution & JWST Enthusiast
+</p>
 
-![JWST Image](/images/jwst.png){: .align-right width="300px"}
+<!-- Image floated to the right with proper margin -->
+<img src="/images/jwst.png" alt="JWST Image" width="300" style="float: right; margin-left: 20px; margin-top: 10px;">
 
-*Image credit: [NASA / JWST](https://webbtelescope.org/contents/media/images/01GHBYCCMDW24CT0BGH7WXNMS0.html)*
+<!-- Image credit below the image -->
+<div style="clear: right; font-size: 0.8em; color: #555; margin-top: 5px;">
+Image credit: <a href="https://webbtelescope.org/contents/media/images/01GHBYCCMDW24CT0BGH7WXNMS0.html" target="_blank">NASA / JWST</a>
+</div>
 
-
+<!-- About section -->
 # 💡 About 
-I am a recent graduate from the master's degree in Astrophysics and Cosmology at the University of Bologna, with a strong passion for astronomy. Before coming to Bologna, I obtained my undergraduate degree in Technical Physics from the Vienna University of Technology, where spent five months at Loughborough University (UK) as part of the Erasmus+ programme. Studying in England and meeting people from various cultural and academic backgrounds has had a strong influence on my personal and academic development.
+I am a recent graduate with a master's degree in Astrophysics and Cosmology from the University of Bologna, with a strong passion for astronomy. Before coming to Bologna, I obtained my undergraduate degree in Technical Physics from the Vienna University of Technology, where I spent five months at Loughborough University (UK) as part of the Erasmus+ programme. Studying in England and meeting people from various cultural and academic backgrounds has had a strong influence on my personal and academic development.
 
 # 🔭 Research 
 My research interests focus on observational astrophysics, particularly **high-redshift galaxies, black hole formation, and the evolution of cosmic structure**. My current research involves analysing photometric data from the **mid-infrared instrument (MIRI) onboard JWST**, taken by the PRIMER, COSMOS-Web and COSMOS-3D surveys in the COSMOS field, and compiling a photometric catalogue. 
