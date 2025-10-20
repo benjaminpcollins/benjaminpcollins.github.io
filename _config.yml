@@ -224,10 +224,13 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-  portfolio:
+  talks:
     output: true
     permalink: /:collection/:path/
-  talks:
+  conferences:
+    output: true
+    permalink: /:collection/:path/
+  projects:
     output: true
     permalink: /:collection/:path/
 
