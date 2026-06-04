@@ -189,6 +189,7 @@ input, select, textarea {
 
 		p.major {
 			font-size: 1.25rem;
+			text-align: justify;
 		}
 
 	h1, h2, h3, h4, h5, h6 {
