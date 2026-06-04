@@ -190,6 +190,7 @@ input, select, textarea {
 
 		p.major {
 			font-size: 1.25rem;
+			text-align: center;
 		}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -8602,3 +8603,8 @@ input, select, textarea {
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
+		
+	.fit-entirely {
+    object-fit: contain !important;
+    background-color: #fafafa; /* Optional: adds a clean light background if the image doesn't perfectly fill the box */
+}
