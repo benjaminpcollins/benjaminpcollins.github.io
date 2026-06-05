@@ -227,7 +227,7 @@
 		// Lightbox.
 			$('.gallery.lightbox')
 				.on('click', 'a', function(event) {
-
+					
 					var $a = $(this),
 						$gallery = $a.parents('.gallery'),
 						$modal = $gallery.children('.modal'),
@@ -266,12 +266,13 @@
 
 						}, 600);
 
+
 				})
 				.on('click', '.modal', function(event) {
 
 					var $modal = $(this),
 						$modalImg = $modal.find('img');
-
+										
 					// Locked? Bail.
 						if ($modal[0]._locked)
 							return;
@@ -318,6 +319,53 @@
 							$modal.trigger('click');
 
 				})
+
+				.on('keypress', '.modal', function(event) {
+
+                    var $modal = $(this);
+
+                    // Escape? Hide modal.
+                        if (event.keyCode == 27)
+                            $modal.trigger('click');
+
+                })
+                .on('click', '.next', function(event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    var $modal = $(this).parents('.modal'),
+                        $modalImg = $modal.find('img'),
+                        $gallery = $modal.parents('.gallery');
+
+                    var currentHref = $modalImg.attr('src');
+                    var $currentLink = $gallery.find('a[href="' + currentHref + '"]');
+                    var $nextLink = $currentLink.parents('article').next().find('a');
+
+                    if ($nextLink.length === 0) {
+                        $nextLink = $gallery.find('article').first().find('a');
+                    }
+
+                    $modalImg.attr('src', $nextLink.attr('href'));
+                })
+                .on('click', '.prev', function(event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    var $modal = $(this).parents('.modal'),
+                        $modalImg = $modal.find('img'),
+                        $gallery = $modal.parents('.gallery');
+
+                    var currentHref = $modalImg.attr('src');
+                    var $currentLink = $gallery.find('a[href="' + currentHref + '"]');
+                    var $prevLink = $currentLink.parents('article').prev().find('a');
+
+                    if ($prevLink.length === 0) {
+                        $prevLink = $gallery.find('article').last().find('a');
+                    }
+
+                    $modalImg.attr('src', $prevLink.attr('href'));
+                })
+// ... rest of your file stays exactly the same
 				.prepend('<div class="modal" tabIndex="-1"><div class="inner"><img src="" /></div></div>')
 					.find('img')
 						.on('load', function(event) {
