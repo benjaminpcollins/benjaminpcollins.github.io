@@ -206,7 +206,7 @@ input, select, textarea {
 		}
 
 	h1 {
-		font-size: 3.5rem;
+		font-size: 3.00rem;
 		line-height: 1.2;
 	}
 
@@ -8605,6 +8605,13 @@ input, select, textarea {
 			}
 		
 	.fit-entirely {
-    object-fit: contain !important;
-    background-color: #fafafa; /* Optional: adds a clean light background if the image doesn't perfectly fill the box */
-}
+		object-fit: contain !important;
+		background-color: #fafafa; /* Optional: adds a clean light background if the image doesn't perfectly fill the box */
+	}
+
+	.uniform-gallery article .image img {
+		width: 100% !important;
+		height: 250px !important; /* Forces a uniform height */
+		object-fit: cover !important; /* Prevents stretching by cropping the edges if ratios differ */
+		object-position: center center !important; /* Keeps the center of both images in frame */
+	}
