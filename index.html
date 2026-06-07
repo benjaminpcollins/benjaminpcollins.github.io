@@ -55,6 +55,9 @@
 								<li><a href="https://bsky.app/profile/luckystarling.bsky.social" target="_blank" title="Bluesky">
     								<img src="images/icons/Bluesky_Logo.svg" alt="Bluesky" style="width:2.00em; height:2.00em; vertical-align:middle;">
 										</a></li>
+								<li style="margin-left: auto;">
+									<button class="theme-toggle button primary small icon solid fa-moon">Dark Mode</button>
+								</li>
 							</ul>
 
 						</div>
@@ -288,6 +291,9 @@
 										<img src="images/icons/Bluesky_Logo.svg" alt="Bluesky" style="width:2.00em; height:2.00em; vertical-align:middle;">
 									</a>
 								</li>
+								<li style="margin-left: auto;">
+									<button class="theme-toggle button primary small icon solid fa-moon">Dark Mode</button>
+								</li>
 							</ul>
 							<p>&copy; Benjamin Philip Collins. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 						</div>
@@ -303,6 +309,54 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				// 1. Grab ALL instances of the theme toggle button on the page
+				const themeToggleButtons = document.querySelectorAll('.theme-toggle');
+				const siteBody = document.body;
+
+				// 2. INITIALIZATION: Run immediately when the page loads
+				const savedTheme = localStorage.getItem('theme');
+
+				if (savedTheme === 'dark') {
+					siteBody.classList.add('invert');
+					// Loop through all buttons on the page to change their initial text/icon to Sun
+					themeToggleButtons.forEach(btn => {
+						btn.classList.remove('fa-moon');
+						btn.classList.add('fa-sun');
+						btn.textContent = 'Light Mode';
+					});
+				}
+
+				// 3. INTERACTION: Setup synchronised click actions
+				themeToggleButtons.forEach(clickedBtn => {
+					clickedBtn.addEventListener('click', () => {
+						// Toggle the dark palette framework on the body tag
+						siteBody.classList.toggle('invert');
+						const isDarkMode = siteBody.classList.contains('invert');
+
+						if (isDarkMode) {
+							localStorage.setItem('theme', 'dark');
+						} else {
+							localStorage.setItem('theme', 'light');
+						}
+
+						// SYNCHRONISATION LOOP: Update EVERY button layout instantly to match the new state
+						themeToggleButtons.forEach(btn => {
+							if (isDarkMode) {
+								btn.classList.remove('fa-moon');
+								btn.classList.add('fa-sun');
+								btn.textContent = 'Light Mode';
+							} else {
+								btn.classList.remove('fa-sun');
+								btn.classList.add('fa-moon');
+								btn.textContent = 'Dark Mode';
+							}
+						});
+					});
+				});
+			</script>
+		
 
 	</body>
 </html>

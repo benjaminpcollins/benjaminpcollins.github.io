@@ -8615,3 +8615,157 @@ input, select, textarea {
 		object-fit: cover !important; /* Prevents stretching by cropping the edges if ratios differ */
 		object-position: center center !important; /* Keeps the center of both images in frame */
 	}
+
+	/* Forces every text element inside this specific section to center align */
+	.force-centered-section,
+	.force-centered-section h2,
+	.force-centered-section p,
+	.force-centered-section h3 {
+		text-align: center !important;
+	}
+
+	/* ==========================================================================
+   CUSTOM THEME INVERSION: Premium Charcoal & High-Visibility Buttons
+   ========================================================================== */
+
+	/* 1. Soft Dark Background & Crisp Text Alignment */
+	body.invert,
+	body.invert #wrapper,
+	body.invert #wrapper > * {
+		background-color: #121212 !important; /* Premium charcoal shade */
+		color: #e0e0e0 !important;            /* Off-white to ease eye strain */
+	}
+
+	/* 2. Bold Accent Headers */
+	body.invert h1, 
+	body.invert h2, 
+	body.invert h3, 
+	body.invert h4, 
+	body.invert strong {
+		color: #ffffff !important; /* Pure white headers for striking contrast */
+	}
+
+	/* 3. High-Visibility Action Buttons (Dark Mode State) */
+	body.invert .button,
+	body.invert button,
+	body.invert input[type="submit"] {
+		background-color: #2a2a2a !important;      /* Lifted gray button container */
+		box-shadow: inset 0 0 0 1px #444444 !important; /* Visible structural border */
+		color: #ffffff !important;                  /* Sharp, readable label text */
+	}
+
+	/* 4. High-Visibility Primary Buttons (e.g., "Read My Story") */
+	body.invert .button.primary {
+		background-color: #47D3E5 !important; /* Vibrant teal anchor highlight */
+		color: #121212 !important;            /* High-contrast dark text inside teal */
+		box-shadow: none !important;
+	}
+
+	/* 5. Clean Button Hover & Interactive States */
+	body.invert .button:hover,
+	body.invert button:hover {
+		background-color: #3a3a3a !important;        /* Subtle interactive lighting change */
+		box-shadow: inset 0 0 0 1px #47D3E5 !important;   /* Vibrant template teal accent border */
+		color: #47D3E5 !important;                    /* Glowing text link feedback */
+	}
+
+	body.invert .button.primary:hover {
+		background-color: #1ebdd1 !important; /* Richer teal shift on hover */
+		color: #ffffff !important;            /* Text flips to white for punchy feedback */
+	}
+
+	/* 6. Social Icon Bounding Boxes */
+	body.invert .icons a:before {
+		color: #e0e0e0 !important;
+		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2) !important;
+	}
+
+	body.invert .icons a:hover:before {
+		color: #47D3E5 !important;
+		box-shadow: inset 0 0 0 1px #47D3E5 !important;
+	}
+
+	/* ==========================================================================
+   UPGRADED FORM FIX: Specific targets for inputs and the Send button
+   ========================================================================== */
+
+	/* 1. Force all form input fields into the premium charcoal state */
+	body.invert form input[type="text"],
+	body.invert form input[type="email"],
+	body.invert form textarea,
+	body.invert form select,
+	body.invert .field input[type="text"],
+	body.invert .field input[type="email"],
+	body.invert .field textarea {
+		background-color: #222222 !important;
+		border: solid 1px rgba(255, 255, 255, 0.25) !important;
+		color: #ffffff !important;
+	}
+
+	/* 2. Clear visual feedback glow when clicking inside a form field */
+	body.invert form input:focus,
+	body.invert form textarea:focus {
+		border-color: #47D3E5 !important;
+		box-shadow: 0 0 0 1px #47D3E5 !important;
+	}
+
+	/* 3. Force placeholder text to be visible and distinct */
+	body.invert form ::-webkit-input-placeholder { color: rgba(255, 255, 255, 0.5) !important; }
+	body.invert form :-moz-placeholder           { color: rgba(255, 255, 255, 0.5) !important; }
+	body.invert form ::-moz-placeholder          { color: rgba(255, 255, 255, 0.5) !important; }
+	body.invert form :-ms-input-placeholder      { color: rgba(255, 255, 255, 0.5) !important; }
+
+	/* 4. Crucial "Send Message" Primary Button Fix */
+	body.invert form .button.primary,
+	body.invert form input[type="submit"].primary,
+	body.invert .actions input[type="submit"] {
+		background-color: #47D3E5 !important; /* Locks the button in template teal */
+		color: #121212 !important;            /* High-contrast dark text inside teal */
+		box-shadow: none !important;
+		border: none !important;
+		transition: background-color 0.2s ease, color 0.2s ease !important;
+	}
+
+	/* 5. Force the hover state to activate a crisp, glowing feedback shift */
+	body.invert form .button.primary:hover,
+	body.invert form input[type="submit"].primary:hover,
+	body.invert .actions input[type="submit"]:hover {
+		background-color: #1ebdd1 !important; /* Richer, active teal shift */
+		color: #ffffff !important;            /* Pop the text to white on hover */
+		cursor: pointer !important;
+	}
+
+	/* 8. Force Form Labels ("Name", "Email", "Message") to stand out cleanly */
+	body.invert form label,
+	body.invert .field label,
+	body.invert .field > span {
+		color: #ffffff !important;        /* Pure white to pop cleanly off the dark background */
+		font-weight: 600 !important;       /* Slightly bolder weight for clean structural scanning */
+		letter-spacing: 0.05em !important; /* Subtle academic crisp tracking */
+	}
+
+	/* ==========================================================================
+   BORDER SEPARATORS FIX: Bringing back section lines and grids
+   ========================================================================== */
+
+	/* 1. Restore Section Boundaries & Horizontal Rules (hr) */
+	body.invert hr,
+	body.invert .index > *,
+	body.invert ul.alt li {
+		border-color: rgba(255, 255, 255, 0.15) !important;
+	}
+
+	/* 2. Restore Section 6 Three-Column Grid Divider Lines */
+	body.invert .items.style1,
+	body.invert .items.style1 > *,
+	body.invert .items.style2,
+	body.invert .items.style2 > *,
+	body.invert .items > article {
+		border-color: rgba(255, 255, 255, 0.15) !important;
+		box-shadow: none !important; /* Cleans up any leftover dark box shadows */
+	}
+
+	/* 3. Restore the Toolbar Divider Line above your footer social icons */
+	body.invert div[style*="border-top"] {
+		border-top-color: rgba(255, 255, 255, 0.15) !important;
+	}
