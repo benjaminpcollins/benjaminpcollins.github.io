@@ -40,25 +40,32 @@
 						
 							<!-- Social icons -->
 							<ul class="icons align-center">
+
 								<li><a href="mailto:bcollins@das.uchile.cl" target="_blank" title="Email">
 									<img src="images/icons/email-black.svg" alt="Email" style="width:2.00em; height:2.00em; vertical-align:middle;">
-										</a></li>
+								</a></li>
+
 								<li><a href="https://orcid.org/0009-0005-9328-6283" target="_blank" title="ORCID">
 									<img src="images/icons/orcid.svg" alt="ORCID" style="width:2.00em; height:2.00em; vertical-align:middle;">
-										</a></li>
+								</a></li>
+
 								<li><a href="https://scholar.google.com/citations?hl=en&user=2VQ8ZXQAAAAJ" target="_blank" title="Google Scholar">
 									<img src="images/icons/google_scholar.svg" alt="Google Scholar" style="width:2.00em; height:2.00em; vertical-align:middle;">
-										</a></li>
+								</a></li>
+
 								<li><a href="https://www.linkedin.com/in/benjamin-philip-collins-8001a0378" target="blank" title="LinkedIn">
 									<img src="images/icons/linkedin.svg" alt="LinkedIn" style="width:2.00em; height:2.00em; vertical-align:middle;">
-										</a></li>
+								</a></li>
+
 								<li><a href="https://bsky.app/profile/luckystarling.bsky.social" target="_blank" title="Bluesky">
-    								<img src="images/icons/Bluesky_Logo.svg" alt="Bluesky" style="width:2.00em; height:2.00em; vertical-align:middle;">
-										</a></li>
+									<img src="images/icons/Bluesky_Logo.svg" alt="Bluesky" style="width:2.00em; height:2.00em; vertical-align:middle;">
+								</a></li>
+
 								<li style="margin-left: auto;">
 									<button class="theme-toggle button primary small icon solid fa-moon">Dark Mode</button>
 								</li>
-							</ul>
+								
+							</ul> 
 
 						</div>
 						<div class="image">
@@ -69,7 +76,7 @@
 					</section>
 
 				<!-- Two -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first" style="border-top: solid 1px rgba(255,255,255,0.15);">
 						<div class="content">
 							<h2>About</h2>
 							<p> Growing up in Austria, I obtained my undergraduate degree in Technical Physics from the Vienna University of Technology (TU Wien) in 2019.
@@ -95,7 +102,7 @@
 					</section>
 
 				<!-- Three -->
-					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" style="border-top: solid 1px rgba(255,255,255,0.15);">
 						<div class="content">
 							<h2>Research</h2>
 							<p> My research interests lie in the field of galaxy evolution, with a particular focus on understanding the role of dust and the interstellar medium (ISM) 
@@ -115,7 +122,7 @@
 					</section>
 
 				<!-- Four: Publications and Presentations Teaser -->
-                    <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="publications">
+                    <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="publications" style="border-top: solid 1px rgba(255,255,255,0.15);">
                         <div class="content">
                             <h2>Publications & Talks</h2>
                             <p>
@@ -141,7 +148,7 @@
                         </div>
                     </section>
 
-                <section class="wrapper style1 align-center force-centered-section">
+                <section class="wrapper style1 align-center force-centered-section" style="border-top: solid 1px rgba(255,255,255,0.15);">
 					<div class="inner">
 						<h2>Life in Astronomy</h2>
 						<p>Science is meant to be shared. Beyond research, I am dedicated to open-source software, collaboration efforts, and supporting outreach activities for the local community.</p>
@@ -237,11 +244,12 @@
                     </section>
 
                 <!-- Seven: Get in Touch -->
-                    <section class="wrapper style1 align-center">
+                    <section class="wrapper style1 align-center" style="border-top: solid 1px rgba(255,255,255,0.15);">
                         <div class="inner medium">
                             <h2>Get in touch</h2>
-                            <p>If you want to collaborate or have questions about my research or outreach efforts, feel free to send me a message or click any of the icons below!</p>
-                            <form method="post" action="https://formspree.io/f/YOUR_ID_HERE"> <!-- Recommended fix for static sites -->
+                            <p>If you want to collaborate or have questions about my research or outreach efforts, feel free to send me a message through the 
+								contact form or by clicking the icons below!</p>
+                            <form method="post" action="https://formspree.io/f/mqeobezv"> <!-- Recommended fix for static sites -->
                                 <div class="fields">
                                     <div class="field half">
                                         <label for="name">Name</label>
@@ -265,7 +273,7 @@
                     </section>
 
 				<!-- Footer -->
-					<footer class="wrapper style1 align-center">
+					<footer class="wrapper style1 align-center" style="border-top: solid 1px rgba(255,255,255,0.15);">
 						<div class="inner">
 							<ul class="icons">
 								<li>
@@ -317,12 +325,29 @@
 				const themeToggleButtons = document.querySelectorAll('.theme-toggle');
 				const siteBody = document.body;
 
-				// 2. INITIALIZATION: Run immediately when the page loads
+				// ==========================================================================
+				// 2. INTELLIGENT INITIALIZATION: System Theme Sensing
+				// ==========================================================================
 				const savedTheme = localStorage.getItem('theme');
+				
+				// Check if the user's computer/browser is natively set to Dark Mode
+				const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
+				// Determine the starting theme state
+				let activeTheme = 'light'; // Default baseline
+				
 				if (savedTheme === 'dark') {
+					activeTheme = 'dark';
+				} else if (savedTheme === 'light') {
+					activeTheme = 'light';
+				} else if (prefersDarkMode) {
+					// No manual save exists, but their computer is natively running Dark Mode!
+					activeTheme = 'dark';
+				}
+
+				// Apply the chosen starting theme instantly on page load
+				if (activeTheme === 'dark') {
 					siteBody.classList.add('invert');
-					// Loop through all buttons on the page to change their initial text/icon to Sun
 					themeToggleButtons.forEach(btn => {
 						btn.classList.remove('fa-moon');
 						btn.classList.add('fa-sun');
@@ -330,20 +355,22 @@
 					});
 				}
 
-				// 3. INTERACTION: Setup synchronised click actions
+				// ==========================================================================
+				// 3. INTERACTION: Setup synchronized click actions
+				// ==========================================================================
 				themeToggleButtons.forEach(clickedBtn => {
 					clickedBtn.addEventListener('click', () => {
-						// Toggle the dark palette framework on the body tag
 						siteBody.classList.toggle('invert');
 						const isDarkMode = siteBody.classList.contains('invert');
 
+						// Save the explicit user override choice to memory
 						if (isDarkMode) {
 							localStorage.setItem('theme', 'dark');
 						} else {
 							localStorage.setItem('theme', 'light');
 						}
 
-						// SYNCHRONISATION LOOP: Update EVERY button layout instantly to match the new state
+						// Update EVERY button on the page instantly to match the new state
 						themeToggleButtons.forEach(btn => {
 							if (isDarkMode) {
 								btn.classList.remove('fa-moon');
@@ -357,8 +384,19 @@
 						});
 					});
 				});
-			</script>
-		
 
+				// ==========================================================================
+				// 4. SECURITY & HYGIENE: Clear form inputs on back-button navigation
+				// ==========================================================================
+				window.addEventListener('pageshow', (event) => {
+					if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
+						const contactForm = document.querySelector('form[action*="formspree.io"]');
+						if (contactForm) {
+							contactForm.reset();
+						}
+					}
+				});
+			</script>
+			
 	</body>
 </html>

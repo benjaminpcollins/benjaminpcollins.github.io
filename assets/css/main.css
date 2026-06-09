@@ -8769,3 +8769,31 @@ input, select, textarea {
 	body.invert div[style*="border-top"] {
 		border-top-color: rgba(255, 255, 255, 0.15) !important;
 	}
+
+	/* ==========================================================================
+   FOOTER TYPOGRAPHY FIX: Restoring Credits & Inline Link Visibility
+   ========================================================================== */
+
+	/* 1. Force the copyright text block to stay clear and legible */
+	body.invert footer p,
+	body.invert .inner p {
+		color: #e0e0e0 !important;
+	}
+
+	/* 2. Target the "HTML5 UP" anchor link so it displays cleanly and changes state */
+	body.invert footer p a,
+	body.invert .inner p a {
+		color: #ffffff !important;               
+		text-decoration: none !important;
+		/* Force the native HTML5UP border underline to become a visible soft white */
+		border-bottom: solid 1px rgba(255, 255, 255, 0.4) !important; 
+		transition: color 0.2s ease, border-bottom-color 0.2s ease !important;
+	}
+
+	/* 3. Give the link a responsive teal glow when a visitor hovers over it */
+	body.invert footer p a:hover,
+	body.invert .inner p a:hover {
+		color: #47D3E5 !important;               
+		/* Snap the underline color to match the vibrant template teal on hover */
+		border-bottom-color: #47D3E5 !important; 
+	}
