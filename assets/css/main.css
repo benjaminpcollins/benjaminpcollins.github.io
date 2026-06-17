@@ -8797,3 +8797,21 @@ input, select, textarea {
 		/* Snap the underline color to match the vibrant template teal on hover */
 		border-bottom-color: #47D3E5 !important; 
 	}
+
+	/* Ensure gallery layout images have standard proportions and high contrast */
+	.row.gtr-uniform img {
+		transition: transform 0.3s ease, filter 0.3s ease;
+	}
+
+	/* Subtle interactive hover effect to bring your travel photos to life */
+	.row.gtr-uniform img:hover {
+		transform: scale(1.02);
+		filter: brightness(1.05);
+	}
+
+	/* Elegant dark mode image border tinting */
+	body.invert .row.gtr-uniform img {
+		border: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	
