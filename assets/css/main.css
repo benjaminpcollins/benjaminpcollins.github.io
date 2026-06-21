@@ -206,12 +206,12 @@ input, select, textarea {
 		}
 
 	h1 {
-		font-size: 3.00rem;
+		font-size: 2.75rem;
 		line-height: 1.2;
 	}
 
 	h2 {
-		font-size: 2.25rem;
+		font-size: 2.00rem;
 	}
 
 	h3 {
@@ -8814,4 +8814,32 @@ input, select, textarea {
 		border: 1px solid rgba(255, 255, 255, 0.1);
 	}
 
-	
+	/* ==========================================================================
+   Dynamic Institutional Logo Swapping
+   ========================================================================== */
+
+/* By default (Light Mode), show the light asset and hide the dark asset */
+.logo-lightmode {
+    display: inline-block;
+}
+.logo-darkmode {
+    display: none;
+}
+
+/* When Dark Mode is active (body has the .invert class), flip the rules! */
+body.invert .logo-lightmode {
+    display: none;
+}
+body.invert .logo-darkmode {
+    display: inline-block;
+}
+
+/* Keep your smooth hover scaling transitions active on both */
+.footer-brand-logo {
+    opacity: 0.9;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.footer-brand-logo:hover {
+    opacity: 1;
+    transform: scale(1.03);
+}
