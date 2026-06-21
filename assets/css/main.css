@@ -8882,3 +8882,12 @@ input, select, textarea {
 	body.invert .research-quote {
 		border-left-color: #47D3E5; /* High-contrast electric blue */
 	}
+
+	/* ==========================================================================
+   Spotlight Section Border Fix for Dark Mode
+   ========================================================================== */
+
+	/* Automatically lights up the top border line when dark mode is toggled active */
+	body.invert section.spotlight {
+		border-top-color: rgba(255, 255, 255, 0.3) !important;
+	}
