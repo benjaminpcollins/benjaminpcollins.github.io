@@ -8774,72 +8774,111 @@ input, select, textarea {
    FOOTER TYPOGRAPHY FIX: Restoring Credits & Inline Link Visibility
    ========================================================================== */
 
-	/* 1. Force the copyright text block to stay clear and legible */
-	body.invert footer p,
-	body.invert .inner p {
-		color: #e0e0e0 !important;
-	}
+    /* 1. Force all standard text blocks to stay clear and legible */
+    body.invert footer,
+    body.invert footer p,
+    body.invert footer div {
+        color: #e0e0e0 !important;
+    }
 
-	/* 2. Target the "HTML5 UP" anchor link so it displays cleanly and changes state */
-	body.invert footer p a,
-	body.invert .inner p a {
-		color: #ffffff !important;               
-		text-decoration: none !important;
-		/* Force the native HTML5UP border underline to become a visible soft white */
-		border-bottom: solid 1px rgba(255, 255, 255, 0.4) !important; 
-		transition: color 0.2s ease, border-bottom-color 0.2s ease !important;
-	}
+    /* 2. OPTIMIZED: Target ANY href link inside the dark footer, regardless of nesting */
+    body.invert footer a,
+    body.invert footer a:link,
+    body.invert footer a:visited {
+        color: #ffffff !important;               
+        text-decoration: none !important;
+        /* Force the native HTML5UP border underline to become a visible soft white */
+        border-bottom: solid 1px rgba(255, 255, 255, 0.4) !important; 
+        transition: color 0.2s ease, border-bottom-color 0.2s ease !important;
+    }
 
-	/* 3. Give the link a responsive teal glow when a visitor hovers over it */
-	body.invert footer p a:hover,
-	body.invert .inner p a:hover {
-		color: #47D3E5 !important;               
-		/* Snap the underline color to match the vibrant template teal on hover */
-		border-bottom-color: #47D3E5 !important; 
-	}
+    /* 3. Give ALL footer links a responsive teal glow when a visitor hovers over them */
+    body.invert footer a:hover,
+    body.invert footer a:active {
+        color: #47D3E5 !important;               
+        /* Snap the underline color to match the vibrant template teal on hover */
+        border-bottom-color: #47D3E5 !important; 
+    }
 
-	/* Ensure gallery layout images have standard proportions and high contrast */
-	.row.gtr-uniform img {
-		transition: transform 0.3s ease, filter 0.3s ease;
-	}
+    /* Ensure gallery layout images have standard proportions and high contrast */
+    .row.gtr-uniform img {
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
 
-	/* Subtle interactive hover effect to bring your travel photos to life */
-	.row.gtr-uniform img:hover {
-		transform: scale(1.02);
-		filter: brightness(1.05);
-	}
+    /* Subtle interactive hover effect to bring your travel photos to life */
+    .row.gtr-uniform img:hover {
+        transform: scale(1.02);
+        filter: brightness(1.05);
+    }
 
-	/* Elegant dark mode image border tinting */
-	body.invert .row.gtr-uniform img {
-		border: 1px solid rgba(255, 255, 255, 0.1);
-	}
+    /* Elegant dark mode image border tinting */
+    body.invert .row.gtr-uniform img {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+	/* ==========================================================================
+   GLOBAL BODY TYPOGRAPHY FIX: Restoring Main Text Inline Link Visibility
+   ========================================================================== */
+
+    /* 1. Target any text link sitting inside a standard <p> element in Dark Mode */
+    body.invert p a,
+    body.invert p a:link,
+    body.invert p a:visited {
+        color: #ffffff !important;               
+        text-decoration: none !important;
+        /* Adds a visible soft white underline under links in your body text */
+        border-bottom: solid 1px rgba(255, 255, 255, 0.4) !important; 
+        transition: color 0.2s ease, border-bottom-color 0.2s ease !important;
+    }
+
+    /* 2. Give body text links the matching responsive teal glow on hover */
+    body.invert p a:hover,
+    body.invert p a:active {
+        color: #47D3E5 !important;               
+        border-bottom-color: #47D3E5 !important; 
+    }
 
 	/* ==========================================================================
    Dynamic Institutional Logo Swapping
    ========================================================================== */
 
-/* By default (Light Mode), show the light asset and hide the dark asset */
-.logo-lightmode {
-    display: inline-block;
-}
-.logo-darkmode {
-    display: none;
-}
+	/* By default (Light Mode), show the light asset and hide the dark asset */
+	.logo-lightmode {
+		display: inline-block;
+	}
+	.logo-darkmode {
+		display: none;
+	}
 
-/* When Dark Mode is active (body has the .invert class), flip the rules! */
-body.invert .logo-lightmode {
-    display: none;
-}
-body.invert .logo-darkmode {
-    display: inline-block;
-}
+	/* When Dark Mode is active (body has the .invert class), flip the rules! */
+	body.invert .logo-lightmode {
+		display: none;
+	}
+	body.invert .logo-darkmode {
+		display: inline-block;
+	}
 
-/* Keep your smooth hover scaling transitions active on both */
-.footer-brand-logo {
-    opacity: 0.9;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
-.footer-brand-logo:hover {
-    opacity: 1;
-    transform: scale(1.03);
-}
+	/* Keep your smooth hover scaling transitions active on both */
+	.footer-brand-logo {
+		opacity: 0.9;
+		transition: transform 0.2s ease, opacity 0.2s ease;
+	}
+	.footer-brand-logo:hover {
+		opacity: 1;
+		transform: scale(1.03);
+	}
+
+	/* ==========================================================================
+	Dynamic Research Quote Left Border Accent
+	========================================================================== */
+
+	/* 1. Default Baseline State (Light Mode: Elegant Slate Gray) */
+	.research-quote {
+		border-left: solid 4px #7a8288; /* Clean, understated neutral gray */
+		transition: border-left-color 0.3s ease; /* Smooth morph transition animation */
+	}
+
+	/* 2. Overridden Theme State (When Dark Mode is Active: Cosmic Blue) */
+	body.invert .research-quote {
+		border-left-color: #47D3E5; /* High-contrast electric blue */
+	}
