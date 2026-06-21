@@ -18,45 +18,65 @@
 	<body class="is-preload">
 
 		<!-- Wrapper -->
-			<div id="wrapper" class="divided">
+			<div id="wrapper" class="divided" >
+				<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right" style="border-top: solid 1px rgba(255,255,255,0.15);">
+					<div class="content">
 
-				<section class="wrapper style1 align-left style="border-top: solid 1px rgba(255,255,255,0.15);">
-                        <div class="inner">
-                            <a href="./index.html" class="button small icon solid fa-arrow-left">Back to Overview</a>
-                        </div>
-                </section>
+						<h1 style="text-align: center; margin-bottom: 1.5em;">My Research</h1>
 
-				<!-- Banner -->
-					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right style="border-top: solid 1px rgba(255,255,255,0.15);">
-						<div class="content">
-							<h1 text-align="center">My Research</h1>
-							<p class="major" style="text-align: justify">Thank you for your interest in my research! On this page, you can find information about my current and past research projects.
-								I compile a full photometric catalogue for 150 galaxies in the COSMOS field. 
-								The resulting data are used to investigate dust energy balance in galaxies at cosmic noon.</p>
+						<blockquote class="research-quote" style="padding-left: 1.5em; margin: 0 auto 2.5em auto; max-width: 650px; background: rgba(255, 255, 255, 0.03); padding-top: 1.25em; padding-bottom: 1.25em; border-radius: 0 6px 6px 0;">
+							<p style="font-size: 1.15em; line-height: 1.6; font-style: italic; margin-bottom: 0.5em; text-align: left;">
+								"The most important feature of any telescope is the imagination with which it is used."
+							</p>
+							<cite style="display: block; text-align: right; font-size: 0.85em; opacity: 0.7; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;">
+								— Vera C. Rubin
+							</cite>
+						</blockquote>	
+						
+						<p>Thank you for your interest. I view every project as a little adventure and an opportunity to grow. On this page, you will find a brief summary of my past and present research.</p>
+						
+						<div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 3.5em;">
+							<a href="./index.html" class="button small icon solid fa-arrow-left" style="margin: 0;">Back to Home</a>
 							
+							<button class="theme-toggle button primary small icon solid fa-moon" style="margin: 0;">Dark Mode</button>
 						</div>
-						<div class="image">
-							<img src="images/gallery/Research/telescope.png" alt="" />
-						</div>
-					</section>
+					</div>
+					<div class="image">
+						<img src="images/gallery/research/jwst_merger2.jpg" alt="JWST image of a merger" style="object-fit: cover; object-position: center center; width: 100%; height: 100%;"/>
+					</div>
+				</section>
 
-				<!-- Spotlight -->
+				<!-- Bachelor's Research -->
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
-							<h2>Investigating Sputtering on Lunar Surface Analogues</h2>
-        					<h3>Bachelor's Thesis Research @ Technische Universität Wien (TU Wien)</h3>
+							<h2>Bachelor's Thesis Research</h2>
+							<h4>Technische Universität Wien (TU Wien)</h4>
+							<h3>Investigating Sputtering on Lunar Surface Analogues</h3>
 							
 							<p>
-								I received my first research training during my Bachelor's thesis at TU Wien, where I
-								simulated the surface sputtering of lunar analogue materials under solar wind ion bombardment.
-								This project led to four co-authored publications, one of which appeared in <i>The Planetary Science Journal</i>.
-							</p>
-							
-							<p>
-								Faced with data collection limitations from commercial proprietary software frameworks, I built and deployed a custom, multi-threaded <strong>Python graphical control application</strong> interfacing directly with a Tektronix FCA3100 frequency counter. By architecting an active sequential spike-filtering algorithm, this hardware-software integration successfully reduced frequency signal noise to <strong>&lt; 3 mHz</strong>, yielding a five-fold optimization in real-time structural data resolution.
+								I gained my first real research experience during my Bachelor's thesis at TU Wien, where I
+								simulated the surface sputtering of lunar analogue materials under solar wind ion bombardment. 
+								I applied for this particular internship because it was the only astrophysics-related research project offered at the time and, 
+								while being rooted in planetary astrophysics, I was able to gather an appreciation for the complex interplay of radiation and matter,
+								which strongly influences the surface texture and composition of rocky bodies in space.
 							</p>
 
 							<p>
+								As part of this project, I co-developed a custom graphical user interface (GUI) in Python to better evaluate frequency curves measured using
+								a quartz crystal microbalance (QCM) to resolve mass removal and deposition at an atomic scale. I also implemented a filtering algorithm
+								to suppress the associated noise and remove spurious frequency spikes in the data, resulting in improved frequency resolution. 
+							</p>
+
+							<p>
+								Apart from these technical achievement, I learned one thing: Patience. 
+								I believe I speak for everyone who is working in a laboratory when I say that experiments will rarely work out the way you planned them on the first try. 
+								Instead, components will break, you may forget to set an important parameter or your data may be affected by some systematic you did not even think about.
+								During the course of this work, I had to overcome many such obstacles and, despite feeling somewhat discouraged at the time, 
+								I can now appreciate the value in these experiences.
+							</p>
+
+							<p>
+								This project led to four co-authored publications, one of which appeared in <i>The Planetary Science Journal</i>. 
 								Since TU Wien does not publish Bachelor's theses online, you can download my thesis directly from this website by clicking the button below.
 							</p>
 							<ul class="actions stacked">
@@ -68,193 +88,54 @@
 						</div>
 					</section>
 
-				<!-- Spotlight -->
+				<!-- Master's Research -->
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
-							<h2>High-redshift Galaxy Evolution</h2>
-        					<h3>Master's Thesis Research @ Alma Mater Studiorum - Universitá di Bologna</h3>
-							<h4>Thesis: <i>Using JWST to Investigate Dust Energy Balance in Galaxies at Cosmic Noon</i></h4>
-							<p>The launch of the James Webb Space Telescope (JWST) has opened a new window onto the high-redshift Universe, 
-								enabling detailed studies of ionised gas and dust emission in distant galaxies. 
-								In this thesis, I perform mid-infrared photometry with the JWST Mid-Infrared Instrument (MIRI) for galaxies in the COSMOS field, 
-								focusing on the Blue Jay survey (1.7 < z < 3.5). The goal is to test the validity of the dust energy balance assumption used in 
+							<h2>Master's Thesis Research</h2>
+        					<h4>Alma Mater Studiorum - Universitá di Bologna</h4>
+							<h3>Using JWST to Investigate Dust Energy Balance in Galaxies at Cosmic Noon</h3>
+							<p>
 								The launch of the James Webb Space Telescope (JWST) has opened a new window onto the high-redshift Universe, 
-								enabling detailed studies of ionised gas and dust emission in distant galaxies. 
-								In this thesis, I perform mid-infrared photometry with the JWST Mid-Infrared Instrument (MIRI) for galaxies in the COSMOS field, 
-								focusing on the Blue Jay survey (1.7 < z < 3.5). The goal is to test the validity of the dust energy balance assumption used in 
-								The launch of the James Webb Space Telescope (JWST) has opened a new window onto the high-redshift Universe, 
-								enabling detailed studies of ionised gas and dust emission in distant galaxies. 
-								In this thesis, I perform mid-infrared photometry with the JWST Mid-Infrared Instrument (MIRI) for galaxies in the COSMOS field, 
-								focusing on the Blue Jay survey (1.7 < z < 3.5). The goal is to test the validity of the dust energy balance assumption used in 
-								</p>
-							<ul class="actions stacked">
-								<li><a href="https://amslaurea.unibo.it/id/eprint/36896/" class="button">Visit AMS Tesi di Laurea</a></li>
+								enabling detailed studies of ionised gas and dust emission in distant galaxies.
+								During my Master's degree in Bologna, I was fortunate enough to be able to work within the Red Cardinal research team, 
+								which is financed by an <a href="https://cordis.europa.eu/project/id/101076080">ERC Starting Grant</a>. 
+								Under the supervision of Dr. Sirio Belli, I developed a custom photometric pipeline to obtain photometric measurements from 
+								archival data of the James Webb's Mid-infrared Instrument (MIRI) and measure the dust emission in high-redshift galaxies.
+							</p>
+
+							<p>
+								During this project, I learned how to handle and manipulate large mosaic FITS files, produce galaxy cutouts, model background emission and noise gradients in the mid-infrared,
+								and perform precise aperture photometry. In order to keep my code clean and organised I created a GitHub project, which later became its own stand-alone 
+								Python library called <i>miriutils</i> and is made publcily available together with the <i>Blue Jay MIRI Photometric Catalogue</i>.
+							</p>
+
+							<p>
+								I measured the dust emission for 111 of 153 cosmic noon galaxies covered by the <i>Blue Jay Survey</i> and compared it to the mid-infrared fluxes predicted by <i>Prospector</i>.
+								We find several biases within our sample towards overestimated dust emission when direct IR-observations are not available, as well as trends with dust attenuation and star-formation rate. 
+								We present our findings in an upcoming publication (Collins et. al 2026, in prep) in <i>Astrophysics & Astronomy</i>.
+							</p>
+							
+							<ul class="actions">
+								<li>
+									<a href="https://amslaurea.unibo.it/id/eprint/36896/" target="_blank" class="button big icon solid fa-graduation-cap">
+										AMSLaurea
+									</a>
+								</li>
+								<li>
+									<a href="https://zenodo.org/search?q=creators.orcid%3A0009-0005-9328-6283" target="_blank" class="button primary big" style="display: inline-flex; align-items: center; height: 3.5em;">
+										<img src="images/icons/zenodo.png" alt="Zenodo icon" class="das-icon-invert" style="width: 1.25em; height: 1.25em; margin-right: 0.75em; vertical-align: middle;" />
+										My Zenodo
+									</a>
+								</li>
 							</ul>
+
 						</div>
 						<div class="image">
-							<img src="images/gallery/Research/BlueJay_footprint.png" alt="Cosmic Starformation Rate Density" />
+							<img src="images/gallery/Research/BlueJay_footprint.png" alt="COSMOS Footprint of the Blue Jay Survey" />
 						</div>
 					</section>
 
-
-				<!-- Gallery -->
-					<section class="wrapper style1 align-center">
-						<div class="inner">
-							<h2>Gallery</h2>
-							<p>This is a <strong>Gallery</strong> element. It can behave as a lightbox (when given the <code>lightbox</code> class), and you can customize its <span class="demo-controls">appearance with a number of modifiers</span>, as well as assign it an optional <code>onload</code> or <code>onscroll</code> transition modifier (<a href="#reference-gallery">details</a>).</p>
-						</div>
-
-						<!-- Gallery -->
-							<div class="gallery style2 medium lightbox onscroll-fade-in">
-								<article>
-									<a href="images/gallery/fulls/01.jpg" class="image">
-										<img src="images/gallery/thumbs/01.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Title</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/02.jpg" class="image">
-										<img src="images/gallery/thumbs/02.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Title</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/03.jpg" class="image">
-										<img src="images/gallery/thumbs/03.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Title</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/04.jpg" class="image">
-										<img src="images/gallery/thumbs/04.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Title</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/05.jpg" class="image">
-										<img src="images/gallery/thumbs/05.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Title</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/06.jpg" class="image">
-										<img src="images/gallery/thumbs/06.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Title</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/07.jpg" class="image">
-										<img src="images/gallery/thumbs/07.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Title</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/08.jpg" class="image">
-										<img src="images/gallery/thumbs/08.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Title</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/09.jpg" class="image">
-										<img src="images/gallery/thumbs/09.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Title</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/10.jpg" class="image">
-										<img src="images/gallery/thumbs/10.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Title</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/11.jpg" class="image">
-										<img src="images/gallery/thumbs/11.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Title</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/12.jpg" class="image">
-										<img src="images/gallery/thumbs/12.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Title</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-							</div>
-
-					</section>
-
-				<!-- Items -->
+					<!-- Items -->
 					<section class="wrapper style1 align-center">
 						<div class="inner">
 							<h2>Items</h2>
@@ -275,54 +156,34 @@
 									<h3>Three</h3>
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
 								</section>
-								<section>
-									<span class="icon solid style2 major fa-wifi"></span>
-									<h3>Four</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-cog"></span>
-									<h3>Five</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-paper-plane"></span>
-									<h3>Six</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-desktop"></span>
-									<h3>Seven</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-sync-alt"></span>
-									<h3>Eight</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-hashtag"></span>
-									<h3>Nine</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-bolt"></span>
-									<h3>Ten</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-envelope"></span>
-									<h3>Eleven</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-leaf"></span>
-									<h3>Twelve</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
 							</div>
 						</div>
 					</section>
+
+
+					<!-- Master's Research -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Current Research</h2>
+        					<h4>Universidad de Chile</h4>
+							<h3>Combining JWST and ALMA to Investigate Dust Emission in Galaxies at <i>z</i> ~ 2</h3>
+							<p>
+								Currently I am investigating how previous data from HST and JWST can be complemented by radio observations 
+								in the (sub-)mm regime using ALMA. I make use of the publicly available <a href="https://sites.google.com/view/a3cosmos">A3COSMOS</a> data products, 
+								which combined all archival ALMA observations in the COSMOS field. After cross-referencing galaxies from the Blue Jay sample with their catalogues,
+								I obtained continuum images in ALMA bands 6 & 7 for four galaxies, opening a window onto the emission from cold 
+								dust within the ISM of these systems. 
+							</p>
+
+						</div>
+						<div class="image">
+							<img src="images/gallery/research/12332_nircam_with_cont.png" alt="JWST image with ALMA contours" />
+						</div>
+					</section>
+
+
+
+				
 
 				<!-- Additional Elements -->
 					<section class="wrapper style1 align-center">
