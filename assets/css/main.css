@@ -8891,3 +8891,26 @@ input, select, textarea {
 	body.invert section.spotlight {
 		border-top-color: rgba(255, 255, 255, 0.3) !important;
 	}
+
+	/* ==========================================================================
+   Social Icon Layout Cleanup (Borders & Theme Flipping)
+   ========================================================================== */
+
+	/* 1. Explicitly strip away the text-link border lines from graphic wrappers */
+	body.invert footer a.social-link-item {
+		border-bottom: none !important;
+	}
+
+	/* 2. Automatically flip the black GitHub asset to stark white in Dark Mode */
+	body.invert .github-icon-asset {
+		filter: invert(1) brightness(2) !important;
+		opacity: 0.9;
+	}
+
+	/* Maintain smooth hover adjustments */
+	.github-icon-asset {
+		transition: filter 0.2s ease, opacity 0.2s ease;
+	}
+	.github-icon-asset:hover {
+		opacity: 1;
+	}
