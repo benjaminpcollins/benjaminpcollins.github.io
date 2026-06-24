@@ -515,19 +515,33 @@
 			</script>
 
 			<script>
-				// 1. Grab ALL instances of the theme toggle button on the page
+				// 1. Grab instances of elements
 				const themeToggleButtons = document.querySelectorAll('.theme-toggle');
+				const submitBtn = document.querySelector('.form-submit-btn');
 				const siteBody = document.body;
+
+				// Helper function to update the Submit Button style depending on theme
+				function updateSubmitButtonTheme(isDark) {
+					if (!submitBtn) return;
+					if (isDark) {
+						// Dark mode grey look
+						submitBtn.style.setProperty('background-color', 'rgba(255,255,255,0.05)', 'important');
+						submitBtn.style.setProperty('color', '#ffffff', 'important');
+						submitBtn.style.setProperty('box-shadow', 'inset 0 0 0 1px rgba(255,255,255,0.2)', 'important');
+					} else {
+						// Light mode white/transparent look
+						submitBtn.style.setProperty('background-color', 'transparent', 'important');
+						submitBtn.style.setProperty('color', 'inherit', 'important');
+						submitBtn.style.setProperty('box-shadow', 'inset 0 0 0 1px rgba(128,128,128,0.3)', 'important');
+					}
+				}
 
 				// ==========================================================================
 				// 2. INTELLIGENT INITIALIZATION: System Theme Sensing
 				// ==========================================================================
 				const savedTheme = localStorage.getItem('theme');
-				
-				// Check if the user's computer/browser is natively set to Dark Mode
 				const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-				// Determine the starting theme state
 				let activeTheme = 'light'; // Default baseline
 				
 				if (savedTheme === 'dark') {
@@ -535,18 +549,20 @@
 				} else if (savedTheme === 'light') {
 					activeTheme = 'light';
 				} else if (prefersDarkMode) {
-					// No manual save exists, but their computer is natively running Dark Mode!
 					activeTheme = 'dark';
 				}
 
-				// Apply the chosen starting theme instantly on page load
+				// Apply starting theme
 				if (activeTheme === 'dark') {
 					siteBody.classList.add('invert');
+					updateSubmitButtonTheme(true);
 					themeToggleButtons.forEach(btn => {
 						btn.classList.remove('fa-moon');
 						btn.classList.add('fa-sun');
 						btn.textContent = 'Light Mode';
 					});
+				} else {
+					updateSubmitButtonTheme(false);
 				}
 
 				// ==========================================================================
@@ -557,14 +573,13 @@
 						siteBody.classList.toggle('invert');
 						const isDarkMode = siteBody.classList.contains('invert');
 
-						// Save the explicit user override choice to memory
-						if (isDarkMode) {
-							localStorage.setItem('theme', 'dark');
-						} else {
-							localStorage.setItem('theme', 'light');
-						}
+						// Save choice
+						localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
 
-						// Update EVERY button on the page instantly to match the new state
+						// Sync the Submit Button colors instantly
+						updateSubmitButtonTheme(isDarkMode);
+
+						// Update theme buttons
 						themeToggleButtons.forEach(btn => {
 							if (isDarkMode) {
 								btn.classList.remove('fa-moon');
@@ -576,28 +591,6 @@
 								btn.textContent = 'Dark Mode';
 							}
 						});
-
-						const mapContainer = document.querySelector('.jvm-container');
-							if (window.travelMap && mapContainer) {
-								const targetStroke = isDarkMode ? '#121212' : '#ffffff';
-								
-								// 1. Update the background container color
-								mapContainer.style.backgroundColor = isDarkMode ? '#121212' : 'transparent';
-								
-								// 2. Update the baseline parameters for future redraws/hovers
-								window.travelMap.params.regionStyle.initial.stroke = targetStroke;
-								
-								// 3. MAGIC FIX: Force-loop through every SVG path element currently rendered on the map
-								if (window.travelMap.regions) {
-									Object.keys(window.travelMap.regions).forEach(code => {
-										const regionElement = window.travelMap.regions[code].element;
-										if (regionElement) {
-											// Directly forces the SVG line style attribute to update globally
-											regionElement.setStyle({ stroke: targetStroke });
-										}
-									});
-								}
-							}
 					});
 				});
 
